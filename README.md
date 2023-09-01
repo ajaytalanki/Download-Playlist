@@ -21,7 +21,7 @@ credentials in the code where it asks for client_ID and and client_secret.
 
 ### YouTube Credentials
 1. Create a Google Cloud Project:
-Visit the [Google Cloud Console]("https://console.cloud.google.com/")
+Visit the [Google Cloud Console](https://console.cloud.google.com/)
 
 2. Create A New Project:
 Click the project dropdown in the top-left corner and select "Select a project"
