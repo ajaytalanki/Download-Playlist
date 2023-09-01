@@ -43,6 +43,11 @@ First, you will need to retrieve the playlist ID of the spotify playlist you wan
 
 ![Copy playlist ID](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/copy%20link.png?raw=true)
 
+Now, open the MP3IFY program.
+![MP3IFY]([https://github.com/ajaytalanki/Download-Playlist/blob/main/images/copy%20link.png?raw=true](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/app.png?raw=true)https://github.com/ajaytalanki/Download-Playlist/blob/main/images/app.png?raw=true)
+
+
+
 
 
 
