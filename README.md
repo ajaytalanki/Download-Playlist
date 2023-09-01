@@ -23,7 +23,7 @@ credentials in the code where it asks for client_ID and and client_secret.
 1. Create a Google Cloud Project:
 Visit the Google Cloud Console.
 
-2. Create A New Project
+2. Create A New Project:
 Click the project dropdown in the top-left corner and select "Select a project"
 Click the "New Project" button at the top right
 Give your project a name and an organization and create the project
