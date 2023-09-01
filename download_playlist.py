@@ -18,7 +18,7 @@ app.geometry("750x500")
 # Create a Canvas for the background
 canvas = Canvas(app, width = 750, height = 500)
 canvas.pack(fill='both', expand=True)
-background = ImageTk.PhotoImage(file='background.png')
+background = ImageTk.PhotoImage(file='images/background.png')
 canvas.create_image(0, 0, image=background, anchor = 'nw')
 
 directions = '''
