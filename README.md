@@ -41,6 +41,8 @@ Pase this API key where it asks for the credentials in the code
 First, you will need to retrieve the playlist ID of the spotify playlist you want to download. This can be done by right clicking on the desired playlist >
 "Share" > "Copy link to playlist". 
 
+![Copy playlist ID](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/copy%20link.png?raw=true)
+
 
 
 
