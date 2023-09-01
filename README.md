@@ -21,7 +21,7 @@ credentials in the code where it asks for client_ID and and client_secret.
 
 ### YouTube Credentials
 1. Create a Google Cloud Project:
-Visit the Google Cloud Console.
+Visit the [Google Cloud Console]("https://console.cloud.google.com/")
 
 2. Create A New Project:
 Click the project dropdown in the top-left corner and select "Select a project"
@@ -37,6 +37,9 @@ Click on the hamburger menu (≡) and navigate to "APIs & Services" > "Credentia
 Click on the "Create Credentials" button at the top and select API key
 Pase this API key where it asks for the credentials in the code
 
+## Using the Program
+First, you will need to retrieve the playlist ID of the spotify playlist you want to download. This can be done by right clicking on the desired playlist >
+"Share" > "Copy link to playlist". 
 
 
 
