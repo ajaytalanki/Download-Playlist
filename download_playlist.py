@@ -1,12 +1,10 @@
 import tkinter as tk
 from tkinter import *
-from tkinter import ttk
 from tkinter import filedialog
+from tkinter import messagebox
 from PIL import ImageTk 
 import spotipy
 import os
-import sys
-from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyClientCredentials
 from pytube import YouTube
 import googleapiclient.discovery
@@ -56,10 +54,10 @@ def download():
 
     # authenticates spotify credentials and YouTube API-key
     load_dotenv()
-    client_id = os.getenv("CLIENT_ID")
-    client_secret = os.getenv("CLIENT_SECRET")
+    client_id = "ENTER CLIENT_ID"
+    client_secret = "ENTER CLIENT_SECRET"
     client_credentials_manager = SpotifyClientCredentials(client_id, client_secret) 
-    API_KEY = os.getenv("API_KEY")
+    API_KEY = "ENTER API_KEY"
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
     # returns a list of the names and artists of each track in the playlist
@@ -69,9 +67,9 @@ def download():
         try:
             results = sp.playlist_tracks(playlist_id)
         except spotipy.SpotifyException:
-            sys.exit(f"Empty playlist or invalid playlist_id")
+            messagebox.showerror("Playlist Error", message='Empty playlist or invalid laylist ID')
         except Exception:
-            sys.exit(f"Empty playlist or invalid playlist_id")
+            messagebox.showerror("Playlist Error", message='Empty playlist or invalid laylist ID')
 
         tracks = results['items']
         while results['next']:
@@ -88,9 +86,8 @@ def download():
             track_info.append(info)
         return track_info
 
-    playlist_id = playlist_id_entry.get()
-
     # stores the name and artist of each song in the playlist
+    playlist_id = playlist_id_entry.get()
     track_info = get_playlist_tracks(playlist_id)
 
     # searches the song on youtube and downloads the first result as an mp3
@@ -122,19 +119,19 @@ def download():
     for track in track_info:
         download_mp3(track, dest)
 
-    canvas.create_text(375, 450, text="Playlist Succesfully Downloaded!", fill="white", font=("Roboto", 25))
+    messagebox.showinfo("Download Complete", "The download has completed successfully!")
 
-# Create text entry widgets for entering the playlist ID and folder destination
+# Create text entry widgets for entering the playlist ID
 playlist_id_entry = tk.Entry(app)
 playlist_id_entry.configure(borderwidth=2, relief="raised", width=70)
+canvas.create_window(400, 300, window=playlist_id_entry)  
 
+# Create text entry widgets for selecting the folder
 folder_entry = tk.Entry(app)
 folder_entry.configure(borderwidth=2, relief="raised", width=70)
-
-canvas.create_window(400, 300, window=playlist_id_entry)  
 canvas.create_window(400, 350, window=folder_entry)  
 
-## adds browse button for browsing file
+## adds browse button for browsing folders
 browse_button = tk.Button(app, text="Browse", command=browse_folder)
 browse_button.configure(borderwidth=2, relief="raised")
 canvas.create_window(650, 350, window=browse_button, height = 20)
