@@ -46,6 +46,16 @@ First, you will need to retrieve the playlist ID of the spotify playlist you wan
 Now, open the MP3IFY program.
 ![MP3IFY](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/app.png?raw=true)
 
+Copy and pase the playlist ID into the entry box, and select the folder you would like to download the MP3 files to.
+![select](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/select%20folders.png?raw=true)
+
+Wait for the program to complete
+![completion](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/completion.png?raw=true)
+
+Navigate to the destination folder and enjoy the MP3 files!
+![files](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/files.png?raw=true)
+
+
 
 
 
