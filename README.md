@@ -19,7 +19,7 @@ Agree to the Spotify Developer Terms of Service and Privacy Policy.
 After you've created the app, click the settings button in the top right corner. Now you can see your client_ID and client_secret credentials. Paste these
 credentials in the code where it asks for client_ID and and client_secret.
 
-### YouTuve Credentials
+### YouTube Credentials
 
 
 
