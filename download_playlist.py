@@ -54,7 +54,6 @@ def browse_folder():
 def download():
 
     # authenticates spotify credentials and YouTube API-key
-    load_dotenv()
     client_id = "Enter client_id"
     client_secret = "Enter client_secret"
     client_credentials_manager = SpotifyClientCredentials(client_id, client_secret) 
