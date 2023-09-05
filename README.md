@@ -1,5 +1,6 @@
 # Download-Playlist
-This python program uses the tkinter library along with the spotipy and pytibe API's to download all the songs of a given spotify playlist as MP3 files. 
+This python program uses the tkinter library along with the spotipy and pytube API's to download all the songs of a given spotify playlist as MP3 files. 
+This program implements threading to concurrently make requests to YouTube. 
 
 ## Authorizing Credentials
 
