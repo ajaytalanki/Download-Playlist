@@ -8,6 +8,7 @@ import os
 from spotipy.oauth2 import SpotifyClientCredentials
 from pytube import YouTube
 import googleapiclient.discovery
+import threading
 
 # Create the main application window
 app = tk.Tk()
@@ -54,10 +55,10 @@ def download():
 
     # authenticates spotify credentials and YouTube API-key
     load_dotenv()
-    client_id = "ENTER CLIENT_ID"
-    client_secret = "ENTER CLIENT_SECRET"
+    client_id = "Enter client_id"
+    client_secret = "Enter client_secret"
     client_credentials_manager = SpotifyClientCredentials(client_id, client_secret) 
-    API_KEY = "ENTER API_KEY"
+    API_KEY = "Enter Youtube API_KEY"
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
     # returns a list of the names and artists of each track in the playlist
@@ -115,9 +116,22 @@ def download():
         audio = youtube.streams.filter(only_audio=True).first()
         mp3_file = audio.download(output_path=destination,skip_existing=True)
 
-    # downloads the mp3 file of every song in the playlist
+    # Create a list to hold the threads
+    threads = []
+    
+    # Define a function to download a single track and add it to the thread list
+    def download_thread(track, destination):
+        thread = threading.Thread(target=download_mp3, args=(track, destination))
+        threads.append(thread)
+        thread.start()
+    
+    # Download MP3 files concurrently
     for track in track_info:
-        download_mp3(track, dest)
+        download_thread(track, dest)
+    
+    # Wait for all threads to complete
+    for thread in threads:
+        thread.join()
 
     messagebox.showinfo("Download Complete", "The download has completed successfully!")
 
