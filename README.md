@@ -38,26 +38,8 @@ Click on the hamburger menu (≡) and navigate to "APIs & Services" > "Credentia
 Click on the "Create Credentials" button at the top and select API key
 Pase this API key where it asks for the credentials in the code
 
-## Using the Program
-First, you will need to retrieve the playlist ID of the spotify playlist you want to download. This can be done by right clicking on the desired playlist >
-"Share" > "Copy link to playlist". 
-
-![Copy playlist ID](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/copy%20link.png?raw=true)
-
-Now, open the MP3IFY program:
-
-![MP3IFY](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/app.png?raw=true)
-
-Copy and pase the playlist ID into the entry box, and select the folder you would like to download the MP3 files to:  
-
-![select](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/select%20folders.png?raw=true)
-
-Wait for the program to complete:  
-
-![completion](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/completion.png?raw=true)
-
-Navigate to the destination folder and enjoy the MP3 files!
-![files](https://github.com/ajaytalanki/Download-Playlist/blob/main/images/files.png?raw=true)
+## Demo
+A working demo of this program can be found on my [portfolio](https://ajaytalanki.github.io/portfolio/)
 
 
 
